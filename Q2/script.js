@@ -8,9 +8,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const nameInput = document.getElementById('name');
         const userName = nameInput.value.trim();
-
+        const emailInput = document.getElementById('email');
+        const userEmail = emailInput.value.trim();
+        
         if (userName === "") {
             messageDiv.innerHTML = "<p style='color:red;'>Please enter your name.</p>";
+            return;
+        }
+
+        if (userEmail === "") {
+            messageDiv.innerHTML = "<p style='color:red;'>Please enter your email address.</p>";
             return;
         }
 
